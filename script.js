@@ -1,13 +1,14 @@
-const images = document.querySelectorAll("image");
+const slide = document.querySelectorAll(".slide");
 
-for (const image of images) {
+for (const image of slide) {
     image.addEventListener("click", () => {
+        clearActiveSImages();
         image.classList.add("active");
     });
 }
 
 const clearActiveSImages = () => {
-    images.forEach(image => {
-        image.classList.remove('active');
-    })
+    slide.forEach(slide => {
+        slide.classList.remove('active');
+    });
 }
